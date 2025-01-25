@@ -38,7 +38,7 @@ def send_emails(email_list):
         msg.attach(MIMEText(body, 'Plain'))
 
         # Define the file to attach
-        filename = r"C:\Users\hp\Desktop\Zeeshan\Twitter_to_tableau\List_of_largest_companies_in_US_by_revenue.xlsx"
+        filename = r"C:\Users\filename.text"
 
         # Open the file in python as a binary
         attachment = open(filename, 'rb')
