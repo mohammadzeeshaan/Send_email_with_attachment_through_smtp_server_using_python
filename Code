@@ -8,19 +8,16 @@ from email import encoders
 smtp_port = 587  # SMTP port for STARTTLS
 smtp_server = "smtp.gmail.com"
 
-email_from = "azeeshan20@gmail.com"
-email_list = [ "shan.utilitarian@gmail.com","azeeshan20@gmail.com","azeeshan20@gmail.com"]
+email_from = "abc@gmail.com"
+email_list = [ "pqr@gmail.com","efg@gmail.com","xyz@gmail.com"]
 
-password = "xlff digd wwhn veiy"  # Note: Avoid storing passwords in plaintext for security reasons
-
+password = "Your app password"  # Note: Avoid storing passwords in plaintext for security reasons
 
 subject = "Practice Email with attachment using python"
 
 
-
 def send_emails(email_list):
     for person in email_list:
-
 
         # Make the body of the email
         body = """
@@ -40,7 +37,6 @@ def send_emails(email_list):
         # Attach the boby of the message
         msg.attach(MIMEText(body, 'Plain'))
 
-
         # Define the file to attach
         filename = r"C:\Users\hp\Desktop\Zeeshan\Twitter_to_tableau\List_of_largest_companies_in_US_by_revenue.xlsx"
 
@@ -53,7 +49,6 @@ def send_emails(email_list):
         encoders.encode_base64(attachment_package)
         attachment_package.add_header('Content-Disposition',"attachment; filename= " + filename)
         msg.attach(attachment_package)
-
 
         # Cast as string
         text = msg.as_string()
